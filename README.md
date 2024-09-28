@@ -7,7 +7,7 @@ a recommended negotiated salary.
 
 
 
-# FOR DEVELOPMENT:
+## FOR DEVELOPMENT:
 This website was programmed using the Flask framework. To install:
 
 - Set up a virtual environment in working directory 
