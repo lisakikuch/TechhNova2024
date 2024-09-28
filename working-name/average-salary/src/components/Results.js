@@ -20,14 +20,14 @@ function Results() {
     }
   
     const pos = position.toLowerCase();
-    const lvl = range; // use range as a key, no need to lowercase
+    const lvl = range; 
     const loc = userLocation.toLowerCase();
   
     const filteredData = sweSalaries.filter((item) => {
       return (
-        item.NOC_TITLE_FRA.toLowerCase().includes(pos) && 
-        item[lvl] && // use correct salary key (Low, Median, High)
-        item.ER_Name.toLowerCase() === loc // match location
+        item.NOC_TITLE_ENG.toLowerCase().includes(pos) && 
+        item[lvl] && 
+        item.ER_Name.toLowerCase() === loc 
       );
     });
   
