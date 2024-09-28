@@ -3,18 +3,19 @@ import os
 from flask import Flask
 
 def create_app(test_config=None):
-    app = Flask(app.py, instance_relative_config=True)
-    app.config.from_mappig(
-            SECRET_KEY='dev'
+    app = Flask(__name__, instance_relative_config=True)
+    app.config.from_mapping(
+            SECRET_KEY='dev',
             )
     if test_config is None:
         app.config.from_mapping(test_config)
 
     try: 
-        os.makedirs(app.instancae_path)
+        os.makedirs(app.instance_path)
     except OSError:
         pass
 
-    @app.route('/hello')
+    @app.route('/')
     def hello():
         return 'Hello, World!'
+    return app
