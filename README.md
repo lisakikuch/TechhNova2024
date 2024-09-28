@@ -24,4 +24,4 @@ source [venv-name]/bin/activate
 pip install flask
 ```
 
-Please push all new changes into a features branch before pushing to main!!
+Please push all new changes into features-push  branch before pushing to main!!
